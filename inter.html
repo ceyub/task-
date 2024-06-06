@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Taches</h1>
+    <form action="index.php" method="GET">
+        <fieldset>
+            <table>
+                <tr>
+                    <td><label for="task">Nouvelle tâche :</label></td>
+                    <td><input type="text" id="task" name="task" placeholder="id"></td>
+                </tr>
+                <tr>
+                    <td><label for="title">Titre :</label></td>
+                    <td><input type="text" name="title" placeholder="Titre"></td>
+                </tr>
+                <tr>
+                    <td><label for="description">Description :</label></td>
+                    <td><input type="text" name="description" placeholder="Description"></td>
+                </tr>
+                <tr>
+                    <td><label for="search">Rechercher :</label></td>
+                    <td><input type="text" name="search" placeholder="Rechercher"></td>
+                </tr>
+                <tr>
+                    <td><label for="status">Statut :</label></td>
+                    <td>
+                        <select name="status" id="select">
+                            <option value="">Tous les statuts</option>
+                            <option value="En cours">En cours</option>
+                            <option value="Terminé">Terminé</option>
+                            <option value="En attente">En attente</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" name="search" class="button">Rechercher</button>
+                        <button type="submit" class="button" onclick="return verif()">Ajouter</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="pagination">
+                            <a href="#">&uarr;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">&darr;</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" name="status" value="En attente" class="button">En attente</button>
+                        <button type="submit" name="status" value="Terminées" class="button">Terminées</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
